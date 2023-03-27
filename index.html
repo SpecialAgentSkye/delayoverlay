@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>overlay delay</title>
+    <script>
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+	const delay = urlParams.get("delay")
+	const url = urlParams.get("url")
+			window.setTimeout(function () {
+				location.href = url;
+			}, delay*1000);
+    </script>
+</head>
+<body>
+</body>
+</html>
